@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/gitname/react-gh-pages/static/css/main.073c9b0a.css",
-    "main.js": "/gitname/react-gh-pages/static/js/main.c688a577.js",
-    "static/js/787.9498f49b.chunk.js": "/gitname/react-gh-pages/static/js/787.9498f49b.chunk.js",
-    "static/media/logo.svg": "/gitname/react-gh-pages/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "index.html": "/gitname/react-gh-pages/index.html",
-    "main.073c9b0a.css.map": "/gitname/react-gh-pages/static/css/main.073c9b0a.css.map",
-    "main.c688a577.js.map": "/gitname/react-gh-pages/static/js/main.c688a577.js.map",
-    "787.9498f49b.chunk.js.map": "/gitname/react-gh-pages/static/js/787.9498f49b.chunk.js.map"
+    "main.css": "/Project-CV-Application/static/css/main.073c9b0a.css",
+    "main.js": "/Project-CV-Application/static/js/main.c78398c0.js",
+    "static/js/787.9498f49b.chunk.js": "/Project-CV-Application/static/js/787.9498f49b.chunk.js",
+    "static/media/logo.svg": "/Project-CV-Application/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/Project-CV-Application/index.html",
+    "main.073c9b0a.css.map": "/Project-CV-Application/static/css/main.073c9b0a.css.map",
+    "main.c78398c0.js.map": "/Project-CV-Application/static/js/main.c78398c0.js.map",
+    "787.9498f49b.chunk.js.map": "/Project-CV-Application/static/js/787.9498f49b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.c688a577.js"
+    "static/js/main.c78398c0.js"
   ]
 }
