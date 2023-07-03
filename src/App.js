@@ -9,10 +9,12 @@ import Skills from './components/Skills.js';
 import Education from './components/Education.js';
 import ProfSummary from './components/ProfSummary.js';
 import WorkHistory from './components/WorkHistory.js';
+import Form from './components/Form.js';
 
 import './styles/generalStyles.css'
 
 import { TYPE_OF_THEME } from './enum';
+// import { toHaveValue } from '@testing-library/jest-dom/matchers.js';
 
 
 //STEP 1:
@@ -49,15 +51,58 @@ const ThemeSelector = ({ children }) => {
 // );
 
 function App() {
+  const [personalData, setPersonalData] = React.useState(
+    {
+        firstName: "",
+        lastName: "",
+        mobile: "",
+        road: "",
+        city: "",
+        postCode: "",
+        image: ""
+    }
+  )
+  console.log(personalData)
+
+  function handleChange(e) {
+    console.log(e.target.name)
+    const {name, value, type} = e.target
+
+    if (type === 'file') {
+      handleChangeFile(e)
+      return
+    }
+
+    setPersonalData(prevPersonalData => {
+      return {
+        ...prevPersonalData,
+        [name]: value
+      }
+    })
+  }
+
+  const handleChangeFile = (e) => {
+    const { name } = e.target
+    const file = e.target.files[0]
+    if (!file) return
+
+    const reader = new FileReader()
+    reader.onload = () => {
+      setPersonalData((prevState) => ({
+        ...prevState,
+          [name]: reader.result,
+      }))
+    }
+    reader.readAsDataURL(file)
+  }
+
   return (
     <div className='app-container'>
-      <div>
-        Form
-      </div>
+      <Form handleChange={handleChange}/>
       <ThemeSelector>
         <div className='cv-container'>
-          <Photo />
-          <Title />
+          <Photo personalData={personalData}/>
+          <Title personalData={personalData}/>
           <Skills />
           <Education />
           <ProfSummary />
