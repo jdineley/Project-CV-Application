@@ -4,7 +4,7 @@ export default function Title({personalData}) {
 
     return (
         <div className="title--container">
-            <div className="title--container--name">{personalData.firstName} {personalData.lastName}</div>
+            <div className="title--container--name">{personalData.firstName} <br/> {personalData.lastName}</div>
             <div className="title--container--contact">
                 <div className="title--container--contact--tel">{personalData.mobile}</div>
                 <div className="title--container--contact--seperator">|</div>
