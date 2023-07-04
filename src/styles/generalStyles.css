@@ -8,16 +8,19 @@
 
 .app-container {
     display: flex;
+   
+}
+
+
+
+.form--container {
     max-width: 210mm;
 }
 
-.app-container > * {
-    flex-grow: 1;
-}
-
 .cv-container {
+    display: grid;
     border: 2px solid black;
-    width: 100%;
+    width: 210mm;
     height: 297mm;
 }
 
@@ -30,5 +33,9 @@
 @media (max-width: 1200px) {
     .app-container {
         flex-direction: column;
+        align-items: center;
+    }
+    .cv-container {
+        
     }
 }
