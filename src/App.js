@@ -4,16 +4,16 @@
 // https://css-tricks.com/different-ways-to-write-css-in-react/
 import React, { useState, useRef } from 'react'
 import styled from 'styled-components'
-import Title from './components/Title.js'
-import Photo from './components/Photo.js';
-import Skills from './components/CVForm/Skills.js';
-import Education from './components/CVForm/Education.js';
-import ProfSummary from './components/CVForm/ProfSummary.js';
-import WorkHistory from './components/CVForm/WorkHistory.js';
+// import Title from './components/Title.js'
+// import Photo from './components/Photo.js';
+// import Skills from './components/CVForm/Skills.js';
+// import Education from './components/CVForm/Education.js';
+// import ProfSummary from './components/CVForm/ProfSummary.js';
+// import WorkHistory from './components/CVForm/WorkHistory.js';
 import Form from './components/CVForm/Form.js';
-import TrustedLayout from './cv_layouts/TrustedLayout.js';
-import ContemporaryLayout from './cv_layouts/ContemporaryLayout.js';
-import FreshLayout from './cv_layouts/FreshLayout.js';
+import TrustedLayout from './CVLayouts/TrustedLayout.js';
+import ContemporaryLayout from './CVLayouts/ContemporaryLayout.js';
+import FreshLayout from './CVLayouts/FreshLayout.js';
 import { themesArray } from './enum';
 
 import './styles/generalStyles.css'
