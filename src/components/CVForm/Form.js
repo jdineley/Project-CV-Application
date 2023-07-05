@@ -1,12 +1,18 @@
 import React from "react";
 
-import "../styles/form.css"
+import "../../styles/form.css"
 
-export default function Form({handleChange}) {
+export default function Form({handleChange, themesArray, handleThemeSelect}) {
 
+    const themesElements = themesArray.map(theme => {
+        return <div key={theme} onClick={handleThemeSelect}>{theme}</div>
+    })
 
     return (
         <div className="form--container">
+            <div className="form--container--layoutSelect">
+                {themesElements}
+            </div>
             <form>
                 <div className="form--container--personal">
                     <div className="form--container--personal--header">Personal Information</div>
