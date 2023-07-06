@@ -1,6 +1,6 @@
 import React from 'react'
 
-
+import '../styles/fresh.css'
 
 
 export default function FreshLayout() {

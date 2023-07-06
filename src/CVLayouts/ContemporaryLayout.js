@@ -1,6 +1,6 @@
 import React from 'react'
 
-
+import '../styles/contemporary.css'
 
 
 export default function ContemporaryLayout() {

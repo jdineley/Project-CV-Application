@@ -1,6 +1,6 @@
-<mxfile host="Electron" modified="2023-07-05T22:38:43.476Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.6.1 Chrome/112.0.5615.204 Electron/24.6.1 Safari/537.36" etag="HhOG4gfPeK7-0k6hWHt0" version="21.6.1" type="device">
+<mxfile host="Electron" modified="2023-07-05T22:40:30.873Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.6.1 Chrome/112.0.5615.204 Electron/24.6.1 Safari/537.36" etag="2QiJlJpPgBG9-JIeJ2K5" version="21.6.1" type="device">
   <diagram name="Page-1" id="t_nLvd7C71P4NczTkx_o">
-    <mxGraphModel dx="2120" dy="784" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2206" dy="836" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -13,8 +13,8 @@
         <mxCell id="TFecB4w0ay9IWsotAcAq-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="TFecB4w0ay9IWsotAcAq-1" target="TFecB4w0ay9IWsotAcAq-4">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="TFecB4w0ay9IWsotAcAq-1" value="CV Application" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="260" y="70" width="120" height="60" as="geometry" />
+        <mxCell id="TFecB4w0ay9IWsotAcAq-1" value="&lt;h1&gt;CV Application&lt;/h1&gt;&lt;div&gt;(https://github.com/michalosman/cv-application/tree/main)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="190" width="260" height="130" as="geometry" />
         </mxCell>
         <mxCell id="TFecB4w0ay9IWsotAcAq-2" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;Header&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-80" y="180" width="120" height="60" as="geometry" />
