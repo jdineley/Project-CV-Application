@@ -2,21 +2,15 @@
 // https://prawira.medium.com/react-conditional-import-conditional-css-import-110cc58e0da6
 // https://react.dev/reference/react/lazy
 // https://css-tricks.com/different-ways-to-write-css-in-react/
-
-// import { default as trustedTheme } from '!style-loader!css-loader!./styles/trusted.css';
-// import { default as freshTheme } from '!style-loader!css-loader!./styles/fresh.css';
-// import { default as contemporaryTheme } from '!style-loader!css-loader!./styles/contemporary.css';
-
-// console.log(trustedTheme, freshTheme, contemporaryTheme)
-
-
+// https://stackoverflow.com/questions/66531412/dynamically-load-and-unload-content-of-css-file-in-javascript-react
 import React, { useState, useRef } from 'react'
-import Title from './components/Title.js'
-import Photo from './components/Photo.js';
-import Skills from './components/CVForm/Skills.js';
-import Education from './components/CVForm/Education.js';
-import ProfSummary from './components/CVForm/ProfSummary.js';
-import WorkHistory from './components/CVForm/WorkHistory.js';
+import styled from 'styled-components'
+// import Title from './components/Title.js'
+// import Photo from './components/Photo.js';
+// import Skills from './components/CVForm/Skills.js';
+// import Education from './components/CVForm/Education.js';
+// import ProfSummary from './components/CVForm/ProfSummary.js';
+// import WorkHistory from './components/CVForm/WorkHistory.js';
 import Form from './components/CVForm/Form.js';
 import TrustedLayout from './CVLayouts/TrustedLayout.js';
 import ContemporaryLayout from './CVLayouts/ContemporaryLayout.js';
@@ -24,37 +18,6 @@ import FreshLayout from './CVLayouts/FreshLayout.js';
 import { themesArray } from './enum';
 
 import './styles/generalStyles.css'
-
-import { TYPE_OF_THEME } from './enum';
-// import { toHaveValue } from '@testing-library/jest-dom/matchers.js';
-
-
-//STEP 1:
-//create components using React.lazy
-const ContemporaryTheme = React.lazy(() => import('./styles/Contemp_Theme'));
-const FreshTheme = React.lazy(() => import('./styles/Fresh_Theme'));
-const TrustedTheme = React.lazy(() => import('./styles/Trusted_Theme'));
-
-function removeOtherThemes() {
-  
-}
-
-//STEP 2:
-//create a parent component that will load the components conditionally using React.Suspense
-const ThemeSelector = ({ children, theme }) => {
-  const CHOSEN_THEME = localStorage.getItem('TYPE_OF_THEME') || theme;
-  return (
-    <>
-      <React.Suspense fallback={<></>}>
-        {(CHOSEN_THEME === 'contemporary') && <ContemporaryTheme />}
-        {(CHOSEN_THEME === 'fresh') && <FreshTheme />}
-        {(CHOSEN_THEME === 'trusted') && <TrustedTheme />}
-      </React.Suspense>
-      {children}
-    </>
-  )
-}
-
 
 
 
@@ -81,36 +44,9 @@ function App() {
     }
   )
   
-  const [chosenTheme, SetChosenTheme] = React.useState('trusted')
+  const [theme, SetTheme] = React.useState('trusted')
 
   const {current = themesArray} = useRef(themesArray)
-
-  const availableThemes = new Map();
-  availableThemes.set('trusted', trustedTheme.toString());
-  availableThemes.set('fresh', freshTheme.toString());
-  availableThemes.set('contemporary', contemporaryTheme.toString());
-
-  useEffect( () => {
-    // Add new sheet
-            const newTheme = availableThemes.get(chosenTheme);
-    
-            if(newTheme) {
-                // injectCss borrowed from https://stackoverflow.com/questions/60593614/how-to-load-unload-css-dynamically
-                injectCss(newTheme, chosenTheme);
-            }
-    
-            // Remove all others
-            availableThemes.forEach( (style, theme) => {
-                if(theme !== chosenTheme) {
-                    var stylesheet = document.getElementById(`dynamicstylesheet${theme}`);
-                    if (stylesheet) {
-                        head.removeChild(stylesheet);
-                    }
-                }
-            });
-        
-        }, [chosenTheme])
-
 
   console.log(personalData )
 
@@ -154,7 +90,7 @@ function App() {
   return (
     <div className='app-container'>
       <Form handleChange={handleChange} themesArray={themesArray} handleThemeSelect={handleThemeSelect}/>
-      <ThemeSelector theme={theme}>
+      
         <div className='cv-container'>
           {/* <Photo personalData={personalData}/>
           <Title personalData={personalData}/>
@@ -167,7 +103,7 @@ function App() {
           {theme === 'fresh' && <FreshLayout/>}
           {theme === 'contemporary' && <ContemporaryLayout/>}
         </div>
-      </ThemeSelector>
+      
 
     </div>
   );
