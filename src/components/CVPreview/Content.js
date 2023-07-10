@@ -3,7 +3,7 @@ import styled from "styled-components";
 import ExperienceItem from "./ExperienceItem";
 import EducationItem from "./EducationItem";
 import Section from "../Utils/Section";
-import layoutStyles from "../../layout/layout";
+import layoutConfig from "../../layout/layoutConfig";
 
 const Content = ({ personalInfo, experience, education, layout }) => {
   const experienceItems = experience.map((experienceItem) => (
@@ -30,8 +30,8 @@ const Content = ({ personalInfo, experience, education, layout }) => {
 };
 
 const ContentWrapper = styled.div`
-  grid-column:  ${(props) => layoutStyles[props.layout].ContentWrapper['grid-column']};
-  grid-row:  ${(props) => layoutStyles[props.layout].ContentWrapper['grid-row']};
+  grid-column:  ${(props) => layoutConfig.layoutStyles[props.layout].ContentWrapper['grid-column']};
+  grid-row:  ${(props) => layoutConfig.layoutStyles[props.layout].ContentWrapper['grid-row']};
   padding: 2rem;
   background-color: ${({ theme }) => theme.colors.light};
 `;

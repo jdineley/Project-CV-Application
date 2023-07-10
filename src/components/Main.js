@@ -9,7 +9,7 @@ import emptyCV from './Utils/emptyCV'
 
 const Main = () => {
   const [cv, setCv] = useState(emptyCV)
-  const [layout, setLayout] = useState('default')
+  const [layout, setLayout] = useState('style3')
 
   const handleChangePersonal = (e) => {
     const { name, value, type } = e.target

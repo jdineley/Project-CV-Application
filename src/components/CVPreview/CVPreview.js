@@ -4,7 +4,7 @@ import Header from "./Header";
 import Content from "./Content";
 import Sidebar from "./Sidebar";
 import Photo from "./Photo"
-import layoutStyles from "../../layout/layout";
+import layoutConfig from "../../layout/layoutConfig";
 
 //react-to-print package prints only class components
 
@@ -12,6 +12,7 @@ class CVPreview extends Component {
   render() {
     const { cv, layout } = this.props;
 
+    console.log(layoutConfig.layoutComponents[layout].SideBar)
     return (
       <CVPreviewWrapper layout={layout}>
         <Header personalInfo={cv.personalInfo} layout={layout}/>
@@ -24,7 +25,7 @@ class CVPreview extends Component {
           layout={layout} 
         />
         {/* {layout.Sidebar && <Sidebar personalInfo={cv.personalInfo} layout={layout} />} */}
-        <Sidebar personalInfo={cv.personalInfo} layout={layout} />
+        {layoutConfig.layoutComponents[layout].SideBar && <Sidebar personalInfo={cv.personalInfo} layout={layout} />}
       </CVPreviewWrapper>
     );
   }
@@ -38,8 +39,13 @@ const CVPreviewWrapper = styled.div`
   position: sticky;
   top: 10px;
   display: grid;
-  grid-template-columns: ${(props) => layoutStyles[props.layout].CVPreviewWrapper['grid-template-columns']};
-  grid-template-rows: ${(props) => layoutStyles[props.layout].CVPreviewWrapper['grid-template-rows']};
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 `;
+
+
+
+// grid-template-columns: ${(props) => layoutStyles[props.layout].CVPreviewWrapper['grid-template-columns']};
+// grid-template-rows: ${(props) => layoutStyles[props.layout].CVPreviewWrapper['grid-template-rows']};
 

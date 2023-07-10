@@ -1,11 +1,11 @@
 import styled from 'styled-components'
-import layoutStyles from '../../layout/layout';
+import layoutConfig from '../../layout/layoutConfig';
 
 
-export default function Photo({ personalInfo, layout }) {
+export default function Photo({ personalInfo, layout, HeaderType }) {
 
     return (
-        <PhotoWrapper layout={layout}>
+        <PhotoWrapper layout={layout} HeaderType={HeaderType}>
             <PhotoStyled src={personalInfo.photo}  />
         </PhotoWrapper>
     )
@@ -15,14 +15,15 @@ const PhotoWrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    grid-column: ${(props) => layoutStyles[props.layout].Photo['grid-column']};
-    grid-row: ${(props) => layoutStyles[props.layout].Photo['grid-row']};
-    margin-bottom: ${(props) => layoutStyles[props.layout].Photo['margin-bottom']};
-    padding: ${(props) => layoutStyles[props.layout].Photo['padding']};
-    background-color: ${(props) => layoutStyles[props.layout].Photo['background-color']};
-`
-
-const PhotoStyled = styled.img`
-`;
-
-// padding: ${(props) => props.padding};
+    grid-column: ${(props) => layoutConfig.HeaderTypes[props.HeaderType].Photo['grid-column']};
+    grid-row: ${(props) => layoutConfig.HeaderTypes[props.HeaderType].Photo['grid-row']};
+    margin-right: ${(props) => layoutConfig.HeaderTypes[props.HeaderType].Photo['margin-right']};
+    `
+    
+    const PhotoStyled = styled.img`
+    `;
+    
+    // padding: ${(props) => props.padding};
+    // margin-bottom: ${(props) => layoutConfig[props.layout].Photo['margin-bottom']};
+    // padding: ${(props) => layoutConfig[props.layout].Photo['padding']};
+    // background-color: ${(props) => layoutConfig[props.layout].Photo['background-color']};
