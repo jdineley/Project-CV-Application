@@ -8,8 +8,18 @@ import exampleCV from './Utils/exampleCV'
 import emptyCV from './Utils/emptyCV'
 
 const Main = () => {
-  const [cv, setCv] = useState(emptyCV)
+  const [cv, setCv] = useState(() => JSON.parse(localStorage.getItem("cv")) || emptyCV)
   const [layout, setLayout] = useState('style3')
+
+  React.useEffect(() => {
+    localStorage.setItem("cv", JSON.stringify(cv))
+  },[cv])
+
+  function handleStyleChange(e) {
+    const { value } = e.target;
+    console.dir(e.target.value)
+    setLayout(value)
+  }
 
   const handleChangePersonal = (e) => {
     const { name, value, type } = e.target
@@ -154,6 +164,7 @@ const Main = () => {
         onPrint={handlePrint}
         onLoadExample={handleLoadExample}
         onReset={handleReset}
+        onClickStyle={handleStyleChange}
       />
       <CVPreview cv={cv} ref={componentRef} layout={layout} />
     </MainWrapper>

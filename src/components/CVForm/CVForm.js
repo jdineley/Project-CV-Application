@@ -4,6 +4,7 @@ import Personal from "./Personal";
 import Education from "./Education";
 import Experience from "./Experience";
 import Button from "../Utils/Button";
+import StyleSelect from "./StyleSelect";
 
 const CVForm = ({
   cv,
@@ -17,9 +18,11 @@ const CVForm = ({
   onPrint,
   onLoadExample,
   onReset,
+  onClickStyle
 }) => {
   return (
     <CVFormWrapper>
+      <StyleSelect onClickStyle={onClickStyle}/>
       <Personal personalInfo={cv.personalInfo} onChange={onChangePersonal} />
       <Experience
         experience={cv.experience}

@@ -11,11 +11,6 @@ const Sidebar = ({ personalInfo, layout }) => {
       <Photo src={personalInfo.photo} />
       
       <Personal layout={layout} personalInfo={personalInfo} />
-      {/* <Section title="Personal Details" contrastTitle direction="column">
-        <Subsection title="Address">{personalInfo.address}</Subsection>
-        <Subsection title="Phone Number">{personalInfo.phoneNumber}</Subsection>
-        <Subsection title="Email">{personalInfo.email}</Subsection>
-      </Section> */}
     </SidebarWrapper>
   );
 };
