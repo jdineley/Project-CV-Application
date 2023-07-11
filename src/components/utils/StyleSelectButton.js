@@ -5,9 +5,9 @@ import style3 from "../../assets/style3.png"
 import style4 from "../../assets/style4.png"
 
 
-export default function StyleSelectButton({ layout, onClickStyle }) {
+export default function StyleSelectButton({ format, onClickStyle, layout }) {
 
-    return <SelectButton value={layout} layout={layout} onClick={onClickStyle}/>
+    return <SelectButton value={format} format={format} onClick={onClickStyle} layout={layout}/>
 }
 
 
@@ -15,18 +15,23 @@ export default function StyleSelectButton({ layout, onClickStyle }) {
 const SelectButton = styled.button`
     width: 105px;
     height: 148px;
-    border: 2px solid black;
+    border: ${(props) => {
+        if(props.format === props.layout){
+            return '4px solid red'
+        } 
+        return '2px solid black'
+    }};
     background-image: url(${(props) => {
-        if(props.layout === 'style1') {
+        if(props.format === 'style1') {
             return style1
         } 
-        else if(props.layout === 'style2') {
+        else if(props.format === 'style2') {
             return style2
         } 
-        else if(props.layout === 'style3') {
+        else if(props.format === 'style3') {
             return style3
         } 
         return style4
     }});
     background-size: cover;
-`
+    `

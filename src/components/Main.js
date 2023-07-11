@@ -165,6 +165,7 @@ const Main = () => {
         onLoadExample={handleLoadExample}
         onReset={handleReset}
         onClickStyle={handleStyleChange}
+        layout={layout}
       />
       <CVPreview cv={cv} ref={componentRef} layout={layout} />
     </MainWrapper>

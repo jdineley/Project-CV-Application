@@ -18,11 +18,12 @@ const CVForm = ({
   onPrint,
   onLoadExample,
   onReset,
-  onClickStyle
+  onClickStyle,
+  layout
 }) => {
   return (
     <CVFormWrapper>
-      <StyleSelect onClickStyle={onClickStyle}/>
+      <StyleSelect onClickStyle={onClickStyle} layout={layout}/>
       <Personal personalInfo={cv.personalInfo} onChange={onChangePersonal} />
       <Experience
         experience={cv.experience}
