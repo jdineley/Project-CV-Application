@@ -9,9 +9,11 @@ export default function Personal({ layout, personalInfo }) {
     console.log(layoutConfig.layoutComponents[layout])
 
     const isPartOfSideBar = layoutConfig.layoutComponents[layout].SideBar
+    const headerType = layoutConfig.layoutComponents[layout].Header
+    console.log(headerType)
 
     return (
-        <PersonalWrapper layout={layout} isPartOfSideBar={isPartOfSideBar}>
+        <PersonalWrapper layout={layout} isPartOfSideBar={isPartOfSideBar} headerType={headerType}>
             <PersonalInfoSection layout={layout} isPartOfSideBar={isPartOfSideBar}><Icon src={emailIcon} alt="email"/>{email}</PersonalInfoSection>
             {!isPartOfSideBar  && '•'}
             <PersonalInfoSection layout={layout} isPartOfSideBar={isPartOfSideBar}><Icon src={telIcon} alt="phone"/>{phoneNumber}</PersonalInfoSection>
@@ -23,12 +25,12 @@ export default function Personal({ layout, personalInfo }) {
 
 
 const PersonalWrapper = styled.div`
-grid-column: ${(props) => !props.isPartOfSideBar && layoutConfig.layoutStyles[props.layout].PersonalWrapper['grid-column']};
-grid-row: ${(props) => !props.isPartOfSideBar && layoutConfig.layoutStyles[props.layout].PersonalWrapper['grid-row']};
+grid-column: ${(props) => !props.isPartOfSideBar && layoutConfig.HeaderTypes[props.headerType].Personal['grid-column']};
+grid-row: ${(props) => !props.isPartOfSideBar && layoutConfig.HeaderTypes[props.headerType].Personal['grid-row']};
 align-items: center;
 gap: 20px;
 font-size: 1.2rem;
-display: ${(props) => !props.isPartOfSideBar && layoutConfig.layoutStyles[props.layout].PersonalWrapper['display']};
+display: ${(props) => !props.isPartOfSideBar && layoutConfig.HeaderTypes[props.headerType].Personal['display']};
 
 `
 
@@ -41,5 +43,7 @@ margin-bottom: ${(props) => props.isPartOfSideBar && '20px'};
 const Icon = styled.img`
 width: 14px;
 `
+// grid-column: ${(props) => !props.isPartOfSideBar && layoutConfig.layoutStyles[props.layout].PersonalWrapper['grid-column']};
+// grid-row: ${(props) => !props.isPartOfSideBar && layoutConfig.layoutStyles[props.layout].PersonalWrapper['grid-row']};
 // display: ${(props) => layoutConfig[props.layout].PersonalWrapper['display']};
 // margin-bottom: ${(props) => layoutStyles[props.layout].PersonalInfoSection['margin-bottom']};

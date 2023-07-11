@@ -23,7 +23,3 @@ const PhotoWrapper = styled.div`
     const PhotoStyled = styled.img`
     `;
     
-    // padding: ${(props) => props.padding};
-    // margin-bottom: ${(props) => layoutConfig[props.layout].Photo['margin-bottom']};
-    // padding: ${(props) => layoutConfig[props.layout].Photo['padding']};
-    // background-color: ${(props) => layoutConfig[props.layout].Photo['background-color']};

@@ -19,7 +19,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    font-family: "Nunito", sans-serif;
+    font-family: 'Inter', sans-serif;;
     font-size: 1.6rem;
     background-color: ${({ theme }) => theme.colors.background};
     color: ${({ theme }) => theme.colors.dark};
@@ -45,6 +45,8 @@ const GlobalStyle = createGlobalStyle`
   img {
     display: block;
     width: 100%;
+    max-height: 250px;
+    object-fit: cover;
   }
 
   button,

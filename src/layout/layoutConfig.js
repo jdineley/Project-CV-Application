@@ -15,38 +15,40 @@ const layoutConfig = {
         },
         Header2: {
             Photo: {
-                'grid-column': '1/3',
+                'grid-column': '1/4',
                 'grid-row': '1/4',
                 'margin-right': '20px'
             },
             Personal: {
-                'grid-column': '3/-1',
-                'grid-row': '3/4'
+                'grid-column': '4/-1',
+                'grid-row': '3/4',
+                'display': 'flex'
             },
             NameWrapper: {
-                'grid-column': '3/-1',
+                'grid-column': '4/-1',
                 'grid-row': '1/2'
             },
             TitleWrapper: {
-                'grid-column': '3/-1',
+                'grid-column': '4/-1',
                 'grid-row': '2/3'
             }
         },
         Header3: {
             Photo: {
-                'grid-column': '-3/-1',
+                'grid-column': '-4/-1',
                 'grid-row': '1/4'
             },
             Personal: {
-                'grid-column': '1/-3',
-                'grid-row': '3/4'
+                'grid-column': '1/-4',
+                'grid-row': '3/4',
+                'display': 'flex'
             },
             NameWrapper: {
-                'grid-column': '1/-3',
+                'grid-column': '1/-4',
                 'grid-row': '1/2'
             },
             TitleWrapper: {
-                'grid-column': '1/-3',
+                'grid-column': '1/-4',
                 'grid-row': '2/3'
             }
         }
