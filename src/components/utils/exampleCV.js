@@ -5,7 +5,7 @@ const exampleCV = {
   personalInfo: {
     firstName: 'Amy',
     lastName: 'Pickles',
-    title: 'Mechanical Engineer',
+    title: 'Engineer',
     photo: examplePhoto,
     address: '20 Lord Street',
     phoneNumber: '123456789',

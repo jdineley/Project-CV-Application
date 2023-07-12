@@ -45,7 +45,7 @@ const GlobalStyle = createGlobalStyle`
   img {
     display: block;
     width: 100%;
-    max-height: 250px;
+    max-height: 180px;
     object-fit: cover;
   }
 
