@@ -1,16 +1,26 @@
 {
   "files": {
-    "main.css": "/Project-CV-Application/static/css/main.073c9b0a.css",
-    "main.js": "/Project-CV-Application/static/js/main.c78398c0.js",
-    "static/js/787.9498f49b.chunk.js": "/Project-CV-Application/static/js/787.9498f49b.chunk.js",
-    "static/media/logo.svg": "/Project-CV-Application/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "main.js": "/Project-CV-Application/static/js/main.d5aefee9.chunk.js",
+    "main.js.map": "/Project-CV-Application/static/js/main.d5aefee9.chunk.js.map",
+    "runtime-main.js": "/Project-CV-Application/static/js/runtime-main.46837402.js",
+    "runtime-main.js.map": "/Project-CV-Application/static/js/runtime-main.46837402.js.map",
+    "static/js/2.8688b223.chunk.js": "/Project-CV-Application/static/js/2.8688b223.chunk.js",
+    "static/js/2.8688b223.chunk.js.map": "/Project-CV-Application/static/js/2.8688b223.chunk.js.map",
     "index.html": "/Project-CV-Application/index.html",
-    "main.073c9b0a.css.map": "/Project-CV-Application/static/css/main.073c9b0a.css.map",
-    "main.c78398c0.js.map": "/Project-CV-Application/static/js/main.c78398c0.js.map",
-    "787.9498f49b.chunk.js.map": "/Project-CV-Application/static/js/787.9498f49b.chunk.js.map"
+    "static/js/2.8688b223.chunk.js.LICENSE.txt": "/Project-CV-Application/static/js/2.8688b223.chunk.js.LICENSE.txt",
+    "static/media/blank-profile-picture.2fda6558.png": "/Project-CV-Application/static/media/blank-profile-picture.2fda6558.png",
+    "static/media/envelope-square-solid.bcb18744.svg": "/Project-CV-Application/static/media/envelope-square-solid.bcb18744.svg",
+    "static/media/example_photo.c93f9d64.jpg": "/Project-CV-Application/static/media/example_photo.c93f9d64.jpg",
+    "static/media/map-marker-alt-solid.d9fe5579.svg": "/Project-CV-Application/static/media/map-marker-alt-solid.d9fe5579.svg",
+    "static/media/phone-square-solid.9c22c8e1.svg": "/Project-CV-Application/static/media/phone-square-solid.9c22c8e1.svg",
+    "static/media/style1.9e3bae5f.png": "/Project-CV-Application/static/media/style1.9e3bae5f.png",
+    "static/media/style2.b554e5e4.png": "/Project-CV-Application/static/media/style2.b554e5e4.png",
+    "static/media/style3.0683bb45.png": "/Project-CV-Application/static/media/style3.0683bb45.png",
+    "static/media/style4.3e95255e.png": "/Project-CV-Application/static/media/style4.3e95255e.png"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.c78398c0.js"
+    "static/js/runtime-main.46837402.js",
+    "static/js/2.8688b223.chunk.js",
+    "static/js/main.d5aefee9.chunk.js"
   ]
 }
